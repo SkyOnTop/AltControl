@@ -38,4 +38,4 @@ getgenv().Settings = {
 	['CustomSong'] = 6853070044 --// ! Enter A Song ID And Say 'Song!' ! \\--
 }
 --//---------------------------------------------------------------------------------------------------------------\\-- Loadstring --//
-loadstring(game:HttpGet('https://github.com/SkyOnTop/AltControl/blob/main/new.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SkyOnTop/AltControl/main/new.lua'))()
