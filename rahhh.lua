@@ -38,4 +38,4 @@ getgenv().Settings = {
 	['CustomSong'] = 6853070044 --// ! Enter A Song ID And Say 'Song!' ! \\--
 }
 --//---------------------------------------------------------------------------------------------------------------\\-- Loadstring --//
-loadstring(game:HttpGet(`https://raw.githubusercontent.com/ticxyylos/ticxyylos.github.io/main/Stand/V9.2`))()
+loadstring(game:HttpGet(`https://raw.githubusercontent.com/SkyOnTop/AltControl/main/new.lua`))()
