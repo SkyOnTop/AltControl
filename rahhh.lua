@@ -20,11 +20,11 @@ getgenv().Settings = {
 	--// ! Misc ! \\--
 	['Smoothing'] = 'Classic', --// ! [Classic | Smooth] If [Classic] Less Delays And if [Smooth] The Stand Movement Will Smooth But Kinda Delayed ! \\--
 	['Performance'] = true, --// ! [true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good ! \\--
-	['SummonPose'] = true, --// ! When You Summmon The Stand It Will Posing ! \\--
+	['SummonPose'] = false, --// ! When You Summmon The Stand It Will Posing ! \\--
 	['Posing'] = 'Pose1', --// ! [Pose1 | Pose2 | Pose3] Poses ! \\--
 	['ChatCmds'] = true, --// ! [true | false] Chatted When You Use Some Command ! \\--
 	['AutoMask'] = true, --// ! [true | false] Auto Buy Mask When The Stand Respawn ! \\--
-	['MaskMode'] = 'Riot', --// ! [Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot] The Stand Will Buy The Mask You Selected ! \\--
+	['MaskMode'] = 'Skull', --// ! [Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot] The Stand Will Buy The Mask You Selected ! \\--
 	['FlyModeAnim'] = 'Shazam', --// ! [Shazam | Bugged shazam | Glide | Hover] Stand Follow Animation ! \\--
 	['FlyModeSpeed'] = 0.2, --// ! If Speed '0' It WIll Wierd I Suggest You Use Around '0.1 - 0.5' ! \\--
 	['Msg'] = 'Yare Yare Daze.', --// ! When You Say [/e msg] It Makes All The Alts Say That Message ! \\--
