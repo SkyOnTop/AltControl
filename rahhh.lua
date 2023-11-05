@@ -1,5 +1,5 @@
 getgenv().Credit = 'Made By Ticxyylolz#9164 | Ticxyy | discord.gg/ticxyy' --Dont Change This Or The Script Not Working.
-getgenv().Owner = 'CleanedByxZyn'
+getgenv().Owner = 'hauwntingsoulss'
 getgenv().Settings = {
 	--// ! Main ! \\--
 	['Position'] = 'Right', --// ! Position Of Stand [Back | Left | Right] ! \\--
