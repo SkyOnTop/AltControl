@@ -2,7 +2,7 @@ getgenv().Credit = 'Made By Ticxyylolz#9164 | Ticxyy | discord.gg/ticxyy' --Dont
 getgenv().Owner = 'CleanedByxZyn'
 getgenv().Settings = {
 	--// ! Main ! \\--
-	['Position'] = 'Alt', --// ! Position Of Stand [Back | Left | Right] ! \\--
+	['Position'] = 'Right', --// ! Position Of Stand [Back | Left | Right] ! \\--
 	['CrewID'] = 32570691, --// ! Must Be In Group For It To Work https://www.roblox.com/groups/32570691/Ticxyy ! \\--
 		--// ! Attack ! \\-- 
 	['Attack'] = 'Heavy', --// ! Heavy = Super Punch Light = Spam Punch [Heavy | Light] ! \\--
