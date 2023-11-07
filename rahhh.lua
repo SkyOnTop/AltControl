@@ -39,3 +39,34 @@ getgenv().Settings = {
 }
 --//---------------------------------------------------------------------------------------------------------------\\-- Loadstring --//
 loadstring(game:HttpGet('https://raw.githubusercontent.com/SkyOnTop/AltControl/main/old.lua'))()
+
+local PERCENT_TO_BUY_ARMOR   = 30       --\\ percent of armor left that u want to buy
+
+function announce(title,text,time)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = title;
+        Text = text;
+        Duration = time;
+    })
+end
+announce('Autobuying armor at %' .. tostring(PERCENT_TO_BUY_ARMOR), 'Enjoy!', 8)
+
+local Player = game.Players.LocalPlayer
+function Main1()
+    while wait() do
+        local function AutoArmor()
+            local Origin = Player.Character.HumanoidRootPart.CFrame
+            local Armor = Player.Character.BodyEffects.Armor
+            if Armor.Value <= PERCENT_TO_BUY_ARMOR then
+                repeat
+                    wait()
+		    Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Ignored.Shop["High-Medium Armor] - $2163"].Head.CFrame)
+                    fireclickdetector(game.Workspace.Ignored.Shop["[High-Medium Armor] - $2163"].ClickDetector)
+                until Armor.Value == 130
+                Player.Character.HumanoidRootPart.CFrame = Origin
+            end
+        end
+        local s,e = pcall(AutoArmor)
+    end
+end
+coroutine.resume(coroutine.create(Main1))
