@@ -38,5 +38,5 @@ getgenv().Settings = {
 	['CustomSong'] = 6853070044 --// ! Enter A Song ID And Say 'Song!' ! \\--
 }
 --//---------------------------------------------------------------------------------------------------------------\\-- Loadstring --//
-loadstring(game:HttpGet("https://rentry.co/BloodHoodFucker/raw", true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/SkyOnTop/AltControl/main/old.lua'))()
