@@ -23,7 +23,7 @@ getgenv().Settings = {
     ['Posing'] = 'Pose1', --[Pose1 | Pose2 | Pose3] Poses
     ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
     ['AutoMask'] = true, --[true | false] Auto Buy Mask When The Stand Respawn
-    ['FPSCAP'] = 20, --This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
+    ['FPSCAP'] = 30, --This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
     ['Mask'] = 'Skull', --[Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot] The Stand Will Buy The Mask You Selected
     ['Msg'] = 'Yare Yare Daze.', --When You Say [/e msg] It Makes All The Alts Say That Message
     --//    ! Sounds !     \\--
