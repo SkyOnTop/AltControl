@@ -1542,12 +1542,6 @@ OWNER.Chatted:Connect(function(msg)
 end)
 
 OWNER.Chatted:Connect(function(msg)
-    if msg == ('/e smite') then
-        SummonPose3()
-    end
-end)
-
-OWNER.Chatted:Connect(function(msg)
     if msg == ('/e q3') then
         SummonPose3()
     end
