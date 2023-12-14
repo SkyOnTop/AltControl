@@ -26,7 +26,7 @@ Bind = getgenv().Settings.AntiStomp
 Fpscap = getgenv().Settings.FPSCAP
 lowgraphics = getgenv().Settings.LowGraphics
 Alt = getgenv().Settings.Alt
-local NotifyLibrary = loadstring(game:HttpGet("https://xmxnloz.000webhostapp.com/NotifLib"))()
+local NotifyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/SkyOnTop/AltControl/main/old.lua"))()
 local Notify = NotifyLibrary.Notify
 Notify({Title = "Wait 1 second [real]",Duration = 3.4028235e+38})
 Wait(1)
