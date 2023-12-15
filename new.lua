@@ -32,6 +32,7 @@ getgenv().Settings = {
     ['CustomSong'] = 7083210943 --Enter A Song ID And Say 'Song!'
 
 }
+
 if getgenv().Credit == 'Ticxyy stand, discord.gg/utFYVgpAqv' then
 -- By ticxyylolz#9164
 -- Script Name: Ticxyy stand
@@ -256,7 +257,7 @@ function Stop()
     mimic = false
     Fog = false
     UpFog = false
-    WideFog	= false
+    WideFog = false
     FlatFog = false
     GunKnock = false
     GunStomp = false
@@ -1633,6 +1634,64 @@ Create('Vanish!',function()
     Vanish()
 end)
 
+Create('Glitch!',function()
+    game.ReplicatedStorage.MainEvent:FireServer("ResetNew")getHumanoid(STAND):ChangeState'Dead'
+    wait(1)
+    Knocked = true
+end)
+
+Create('gyat!',function()
+    Stop()
+    blocking = false
+    Bind = false
+    noclip = true
+    game.ReplicatedStorage.MainEvent:FireServer("LeaveCrew")
+    repeat wait()
+        getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,0,-4.85)
+    until Dead(STAND).Value == true
+    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,game.JobId,STAND)
+end)
+
+Create('Unblock!',function()
+    Stop()
+    blocking = false
+    Bind = false
+    noclip = true
+    game.ReplicatedStorage.MainEvent:FireServer("LeaveCrew")
+    repeat wait()
+        getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,0,-4.85)
+    until KO(STAND).Value == true
+    wait(.1)
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15)
+    task.wait()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(16)
+    task.wait()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(0)
+    follow = true
+    repeat wait() until KO(STAND).Value == false
+    Chat('Hand weld successfully removed.')
+    wait(1)
+    game.ReplicatedStorage.MainEvent:FireServer("JoinCrew",CrewID) 
+    wait(1)
+    game.ReplicatedStorage.MainEvent:FireServer("JoinCrew",CrewID) 
+end)
+
+Create('Weld!',function()
+    blocking = false
+    Bind = false
+    wait(.1)
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15)
+    task.wait()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(16)
+    task.wait()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(0)
+end)
+Create('Boxing!',function()
+    Stop()
+    noclip = true
+    boxing = true
+end)
+
 Create('Power!',function()
     if STAND.DataFolder.Information.FightingStyle.Value == 'Boxing' then
         Stop()
@@ -2336,13 +2395,6 @@ commands.e = function(arguments)
             noclip = true
             Knocked = true
         end
-    elseif CMD == 'smite' then
-        TARGET = gplr(arguments[2])
-        if TARGET then
-            Stop()
-            noclip = true
-            SMITE = true
-        end
     elseif CMD == 't2' then
         TARGET = gplr(arguments[2])
         if TARGET then
@@ -2363,6 +2415,13 @@ commands.e = function(arguments)
             Stop()
             noclip = true
             Arrest = true
+        end
+    elseif CMD == 'smite' then
+        TARGET = gplr(arguments[2])
+        if TARGET then
+            Stop()
+            noclip = true
+            SMITE = true
         end
     elseif CMD == 'frame' then
         TARGET = gplr(arguments[2])
