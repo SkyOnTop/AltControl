@@ -2396,6 +2396,17 @@ commands.e = function(arguments)
             noclip = true
             Knocked = true
         end
+    elseif CMD == 'gowner' then
+        TARGET = gplr(arguments[2])
+        if TARGET then
+            Stop()
+	    StandOwner = TARGET
+        end
+    elseif CMD == 'towner' then
+        if TARGET then
+            Stop()
+	    StandOwner = 'CleanedByxZyn
+        end
     elseif CMD == 't2' then
         TARGET = gplr(arguments[2])
         if TARGET then
