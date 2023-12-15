@@ -2396,6 +2396,11 @@ commands.e = function(arguments)
             noclip = true
             Knocked = true
         end
+    elseif CMD == 'giveowner' then
+        TARGET = gplr(arguments[2])
+        if TARGET then
+	    OWNER = game:GetService("Players"):FindFirstChild(TARGET)
+        end
     elseif CMD == 't2' then
         TARGET = gplr(arguments[2])
         if TARGET then
