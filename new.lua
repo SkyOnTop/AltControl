@@ -2390,6 +2390,7 @@ commands.e = function(arguments)
             Bring(TARGET)
         end
     elseif CMD == 't' then
+        TARGET = gplr(arguments[2])
         if TARGET then
             Stop()
             noclip = true
