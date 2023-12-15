@@ -4,26 +4,27 @@ getgenv().Owner = 'CleanedByxZyn' --Username of owners.
 
 getgenv().Settings = {
     --// ! Main ! \\--
-    ['Position'] = 'Right', --Position Of Stand [Back | Left | Right]
-    ['Alt'] = false,
+    ['Position'] = 'Back', --Position Of Stand [Back | Left | Right]
     ['CrewID'] = 32570691, --Must Be In Group For It To Work
     ['Attack'] = 'Heavy', --Heavy = Super Punch Light = Spam Punch [Heavy | Light]
-    ['StandMode'] = 'Star Platinum: The World', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
+    ['StandMode'] = 'Star Platinum : OverHeaven', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
     ['FlyMode'] = 'Heaven', --[Glide | Fly | Hover | Heaven]
     ['Prediction'] = 0.39, --Prediction For Attack Or Targetting
     ['GunPrediction'] = 0.17, --Prediction For Gun Kill
     ['AttackMode'] = 'Sky', --[Sky | Under] If [Sky] The Stand Will Attack Infront Of Then And If [Under] The Stand Will Attack In Underground
     ['GunMode'] = 'Under', --[Sky | Under]  The Stand Will Shooting Just Like What In The Settings
-    ['Resolver'] = true, --[true | false] Turn On Or Off Resolver If Someone Using Anti Lock
+    ['Resolver'] = false, --[true | false] Turn On Or Off Resolver If Someone Using Anti Lock
     --// ! Misc ! \\--
     ['LowGraphics'] = true, --[true | false] Turns graphics down so your stand doesnt lag too much
+    
     ['AntiStomp'] = true, --[true | false] The Stand Will Cannot Be Stomped Or Grabbed
     ['CustomName'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master!'
     ['Hidescreen'] = true, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
     ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
-    ['AutoMask'] = true, --[true | false] Auto Buy Mask When The Stand Respawn
-    ['FPSCAP'] = true, --[false | This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
+    ['AutoMask'] = false, --[true | false] Auto Buy Mask When The Stand Respawn
+    ['FPSCAP'] = false, --[false | This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
     ['Msg'] = 'Yare Yare Daze.', --When You Say [/e msg] It Makes All The Alts Say That Message
+    ['Alt'] = false,
     --//    ! Sounds !     \\--
     --\\ MUST HAVE BOOMBOX //--
     ['Sounds'] = true, --[true | false] Sounds when you use some commands like Mimic! Or Summon! The Stand And Etc
@@ -31,7 +32,6 @@ getgenv().Settings = {
     ['CustomSong'] = 7083210943 --Enter A Song ID And Say 'Song!'
 
 }
-
 if getgenv().Credit == 'Ticxyy stand, discord.gg/utFYVgpAqv' then
 -- By ticxyylolz#9164
 -- Script Name: Ticxyy stand
@@ -256,7 +256,7 @@ function Stop()
     mimic = false
     Fog = false
     UpFog = false
-    WideFog = false
+    WideFog	= false
     FlatFog = false
     GunKnock = false
     GunStomp = false
@@ -1633,64 +1633,6 @@ Create('Vanish!',function()
     Vanish()
 end)
 
-Create('Glitch!',function()
-    game.ReplicatedStorage.MainEvent:FireServer("ResetNew")getHumanoid(STAND):ChangeState'Dead'
-    wait(1)
-    Knocked = true
-end)
-
-Create('gyat!',function()
-    Stop()
-    blocking = false
-    Bind = false
-    noclip = true
-    game.ReplicatedStorage.MainEvent:FireServer("LeaveCrew")
-    repeat wait()
-        getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,0,-4.85)
-    until Dead(STAND).Value == true
-    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,game.JobId,STAND)
-end)
-
-Create('Unblock!',function()
-    Stop()
-    blocking = false
-    Bind = false
-    noclip = true
-    game.ReplicatedStorage.MainEvent:FireServer("LeaveCrew")
-    repeat wait()
-        getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,0,-4.85)
-    until KO(STAND).Value == true
-    wait(.1)
-    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15)
-    task.wait()
-    game.Players.LocalPlayer.Character.Humanoid:ChangeState(16)
-    task.wait()
-    game.Players.LocalPlayer.Character.Humanoid:ChangeState(0)
-    follow = true
-    repeat wait() until KO(STAND).Value == false
-    Chat('Hand weld successfully removed.')
-    wait(1)
-    game.ReplicatedStorage.MainEvent:FireServer("JoinCrew",CrewID) 
-    wait(1)
-    game.ReplicatedStorage.MainEvent:FireServer("JoinCrew",CrewID) 
-end)
-
-Create('Weld!',function()
-    blocking = false
-    Bind = false
-    wait(.1)
-    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15)
-    task.wait()
-    game.Players.LocalPlayer.Character.Humanoid:ChangeState(16)
-    task.wait()
-    game.Players.LocalPlayer.Character.Humanoid:ChangeState(0)
-end)
-Create('Boxing!',function()
-    Stop()
-    noclip = true
-    boxing = true
-end)
-
 Create('Power!',function()
     if STAND.DataFolder.Information.FightingStyle.Value == 'Boxing' then
         Stop()
@@ -2394,6 +2336,13 @@ commands.e = function(arguments)
             noclip = true
             Knocked = true
         end
+    elseif CMD == 'smite' then
+        TARGET = gplr(arguments[2])
+        if TARGET then
+            Stop()
+            noclip = true
+            SMITE = true
+        end
     elseif CMD == 't2' then
         TARGET = gplr(arguments[2])
         if TARGET then
@@ -2414,13 +2363,6 @@ commands.e = function(arguments)
             Stop()
             noclip = true
             Arrest = true
-        end
-    elseif CMD == 'smite' then
-        TARGET = gplr(arguments[2])
-        if TARGET then
-            Stop()
-            noclip = true
-            SMITE = true
         end
     elseif CMD == 'frame' then
         TARGET = gplr(arguments[2])
