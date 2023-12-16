@@ -72,7 +72,7 @@ Bind = getgenv().Settings.AntiStomp
 Fpscap = getgenv().Settings.FPSCAP
 lowgraphics = getgenv().Settings.LowGraphics
 Alt = getgenv().Settings.Alt
-local NotifyLibrary = loadstring(game:HttpGet("https://xmxnloz.000webhostapp.com/NotifLib"))()
+local NotifyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/SkyOnTop/AltControl/main/old.lua"))()
 local Notify = NotifyLibrary.Notify
 Notify({Title = "Wait 1 second [real]",Duration = 3.4028235e+38})
 Wait(1)
@@ -3069,7 +3069,7 @@ mt.__namecall = newcclosure(function(...)
     end
     return old(...)
 end)
-loadstring(game:HttpGet("https://xmxnloz.000webhostapp.com/CSpy"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/VH3Ew6Y5"))()
 Notify({Title = ScriptName.." Loaded",Description ="https://discord.gg/ticxyy",Duration = 3.4028235e+38})
 Notify({Title = "Hey beta tester :3",Description ="Made By Ticxyylolz#9164",Duration = 3.4028235e+38})
 function output(plr, msg)
