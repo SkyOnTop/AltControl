@@ -4,7 +4,7 @@ getgenv().Owner = 'CleanedByxZyn' --Username of owners.
 
 getgenv().Settings = {
     --// ! Main ! \\--
-    ['Position'] = 'Back', --Position Of Stand [Back | Left | Right]
+    ['Position'] = 'Alt', --Position Of Stand [Back | Left | Right]
     ['CrewID'] = 32570691, --Must Be In Group For It To Work
     ['Attack'] = 'Heavy', --Heavy = Super Punch Light = Spam Punch [Heavy | Light]
     ['StandMode'] = 'Star Platinum : OverHeaven', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
