@@ -2435,8 +2435,11 @@ commands.e = function(arguments)
             game.ReplicatedStorage.MainEvent:FireServer("Grabbing")
         end
     elseif CMD == 'save' then
-        Stop()
-        SAVEOWNER()
+        TARGET = gplr(arguments[2])
+        if TARGET then
+            Stop()
+            SAVEOWNER()
+        end
     elseif CMD == 'smite' then
         TARGET = gplr(arguments[2])
         if TARGET then
@@ -2858,7 +2861,7 @@ rs.heartbeat:connect(function()
     elseif follow == true and Pos == "Alt" then
         local RanX = math.random(-1000,1000)
         local RanZ = math.random(-1000,1000)
-        MoveTo(RanX,-495,RanZ)
+        MoveTo(RanX,-250,RanZ)
     end
 
     if looking == true then
