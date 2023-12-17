@@ -2412,6 +2412,7 @@ commands.e = function(arguments)
     elseif CMD == 'nuke' then
         Stop()
         noclip = true
+	follow = false
         t = 0
         repeat wait()
             getRoot(STAND).CFrame = game.Workspace.Ignored.Shop["[Grenade] - $721"].Head.CFrame
@@ -2425,9 +2426,7 @@ commands.e = function(arguments)
         until t >= 10
         getHumanoid(STAND):UnequipTools()
 	getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,3,0) wait(1)
-	noclip = true
         follow = true
-        wait(.1)
         for i,v in pairs(STAND.Backpack:GetChildren()) do
             wait(0.05)
             spawn(function()
