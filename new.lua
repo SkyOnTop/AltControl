@@ -3069,7 +3069,7 @@ mt.__namecall = newcclosure(function(...)
     end
     return old(...)
 end)
-loadstring(game:HttpGet("https://pastebin.com/raw/VH3Ew6Y5"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dehoisted/Chat-Spy/main/source/main.lua"))()
 Notify({Title = ScriptName.." Loaded",Description ="https://discord.gg/ticxyy",Duration = 3.4028235e+38})
 Notify({Title = "Hey beta tester :3",Description ="Made By Ticxyylolz#9164",Duration = 3.4028235e+38})
 function output(plr, msg)
