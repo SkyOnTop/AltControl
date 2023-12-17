@@ -3072,12 +3072,7 @@ end)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dehoisted/Chat-Spy/main/source/main.lua"))()
 Notify({Title = ScriptName.." Loaded",Description ="https://discord.gg/ticxyy",Duration = 3.4028235e+38})
 Notify({Title = "Hey beta tester :3",Description ="Made By Ticxyylolz#9164",Duration = 3.4028235e+38})
-local ChatSpy = _G.ChatSpy
-if ChatSpy then
-    ChatSpy.OnMessageReceived:Connect(function(player, message)
-        Notify({Title = player, Description = message,Duration = 3.4028235e+38})
-    end)
-end
+
 function output(plr, msg)
     Notify({Title = plr.Name.. ": ".. msg ,Duration = 5})
 end
