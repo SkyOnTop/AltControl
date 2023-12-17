@@ -88,6 +88,7 @@ local function Update()
 	end
 	CachedObjects = PreviousObjects;
 	LastTick = tick();
+end
 
 RunService:BindToRenderStep("UpdateList", 0, Update);
 
@@ -99,6 +100,7 @@ local TitleSettings = {
 local DescriptionSettings = {
 	Font = Enum.Font.Gotham;
 	Size = 14;
+}
 
 local MaxWidth = (Container.AbsoluteSize.X - Padding - DescriptionPadding);
 
