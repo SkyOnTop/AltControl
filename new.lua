@@ -2435,11 +2435,8 @@ commands.e = function(arguments)
             game.ReplicatedStorage.MainEvent:FireServer("Grabbing")
         end
     elseif CMD == 'save' then
-        TARGET = gplr(arguments[2])
-        if TARGET then
-            Stop()
-            SAVEOWNER()
-        end
+        Stop()
+        SAVEOWNER()
     elseif CMD == 'smite' then
         TARGET = gplr(arguments[2])
         if TARGET then
