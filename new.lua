@@ -2423,6 +2423,23 @@ commands.e = function(arguments)
             noclip = true
             Arrest = true
         end
+    elseif CMD == 'drop' then
+        if Pos == "Alt" then
+	    Stop()
+            follow = false
+            noclip = true
+            getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,3,0) wait(1)
+            game.ReplicatedStorage.MainEvent:FireServer("Grabbing")
+            follow = true
+        else
+            game.ReplicatedStorage.MainEvent:FireServer("Grabbing")
+        end
+    elseif CMD == 'save' then
+        TARGET = gplr(arguments[2])
+        if TARGET then
+            Stop()
+            SAVEOWNER()
+        end
     elseif CMD == 'smite' then
         TARGET = gplr(arguments[2])
         if TARGET then
