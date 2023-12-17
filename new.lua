@@ -2409,6 +2409,31 @@ commands.e = function(arguments)
 	    Stop()
 	    Grab(TARGET)
         end
+    elseif CMD == 'nuke' then
+        Stop()
+        noclip = true
+        t = 0
+        repeat wait()
+            getRoot(STAND).CFrame = game.Workspace.Ignored.Shop["[Grenade] - $721"].Head.CFrame
+            fireclickdetector(game.Workspace.Ignored.Shop["[Grenade] - $721"].ClickDetector)
+            for i,v in pairs(STAND.Backpack:GetChildren()) do
+                if v.Name == "[Grenade]" then
+                    t = t + 1 
+                    v.Parent = STAND.Character
+                end
+            end
+        until t >= 10
+        getHumanoid(STAND):UnequipTools()
+        follow = true
+        wait(.1)
+        for i,v in pairs(STAND.Backpack:GetChildren()) do
+            wait(0.05)
+            spawn(function()
+                if v.Name == "[Grenade]" then
+                    v.Parent = STAND.Character; v:Activate(); wait(0.1); v:Deactivate(); wait(0.1); v:Activate()
+                end
+            end)
+        end
     elseif CMD == 's' then
         TARGET = gplr(arguments[2])
         if TARGET then
@@ -2435,16 +2460,11 @@ commands.e = function(arguments)
             game.ReplicatedStorage.MainEvent:FireServer("Grabbing")
         end
     elseif CMD == 'save' then
-        Stop()
-        SAVEOWNER()
-    elseif CMD == 'attack' then
-	Stop()
-	noclip = true
-	killnear = true
-    elseif CMD == 'unattack' then
-	Stop()
-	noclip = true
-	follow = true
+        TARGET = gplr(arguments[2])
+        if TARGET then
+            Stop()
+            SAVEOWNER()
+        end
     elseif CMD == 'smite' then
         TARGET = gplr(arguments[2])
         if TARGET then
