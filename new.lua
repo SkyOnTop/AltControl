@@ -2424,6 +2424,8 @@ commands.e = function(arguments)
             end
         until t >= 10
         getHumanoid(STAND):UnequipTools()
+	getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,3,0) wait(1)
+	noclip = true
         follow = true
         wait(.1)
         for i,v in pairs(STAND.Backpack:GetChildren()) do
