@@ -2403,19 +2403,11 @@ commands.e = function(arguments)
             noclip = true
             Kills = true
         end
-    elseif CMD == 'throw' then
+    elseif CMD == 'grab' then
         TARGET = gplr(arguments[2])
         if TARGET then
 	    Stop()
-            if Pos == "Alt" then
-                follow = false
-                noclip = true
-                getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,3,0) wait(1)
-                game.ReplicatedStorage.MainEvent:FireServer("Grabbing",true)
-                follow = true
-            else
-                game.ReplicatedStorage.MainEvent:FireServer("Grabbing",true)
-            end
+	    Grab(TARGET)
         end
     elseif CMD == 's' then
         TARGET = gplr(arguments[2])
