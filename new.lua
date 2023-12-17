@@ -2411,7 +2411,7 @@ commands.e = function(arguments)
         end
     elseif CMD == 'nuke' then
         Stop()
-        noclip = true
+	noclip = true
 	follow = false
         t = 0
         repeat wait()
@@ -2425,7 +2425,6 @@ commands.e = function(arguments)
             end
         until t >= 10
         getHumanoid(STAND):UnequipTools()
-	getRoot(STAND).CFrame = getRoot(OWNER).CFrame*CFrame.new(0,3,0) wait(1)
         follow = true
         for i,v in pairs(STAND.Backpack:GetChildren()) do
             wait(0.05)
