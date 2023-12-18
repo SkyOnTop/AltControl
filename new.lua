@@ -11,9 +11,9 @@ getgenv().Settings = {
     ['FlyMode'] = 'Heaven', --[Glide | Fly | Hover | Heaven]
     ['Prediction'] = 0.35, --Prediction For Attack Or Targetting
     ['GunPrediction'] = 0.17, --Prediction For Gun Kill
-    ['AttackMode'] = 'Sky', --[Sky | Under] If [Sky] The Stand Will Attack Infront Of Then And If [Under] The Stand Will Attack In Underground
+    ['AttackMode'] = 'Under', --[Sky | Under] If [Sky] The Stand Will Attack Infront Of Then And If [Under] The Stand Will Attack In Underground
     ['GunMode'] = 'Under', --[Sky | Under]  The Stand Will Shooting Just Like What In The Settings
-    ['Resolver'] = false, --[true | false] Turn On Or Off Resolver If Someone Using Anti Lock
+    ['Resolver'] = true, --[true | false] Turn On Or Off Resolver If Someone Using Anti Lock
     --// ! Misc ! \\--
     ['LowGraphics'] = true, --[true | false] Turns graphics down so your stand doesnt lag too much
     
@@ -21,7 +21,7 @@ getgenv().Settings = {
     ['CustomName'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master!'
     ['Hidescreen'] = true, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
     ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
-    ['AutoMask'] = false, --[true | false] Auto Buy Mask When The Stand Respawn
+    ['AutoMask'] = true, --[true | false] Auto Buy Mask When The Stand Respawn
     ['FPSCAP'] = false, --[false | This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
     ['Msg'] = 'Yare Yare Daze.', --When You Say [/e msg] It Makes All The Alts Say That Message
     ['Alt'] = false,
