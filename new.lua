@@ -1,6 +1,6 @@
 getgenv().Credit = 'Ticxyy stand, discord.gg/utFYVgpAqv' --Dont change this.
 
-getgenv().Owner = 'CleanedByxZyn' --Username of owners.
+getgenv().Owner = 'CleanedByNob0dy' --Username of owners.
 
 getgenv().Settings = {
     --// ! Main ! \\--
