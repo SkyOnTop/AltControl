@@ -230,7 +230,7 @@ local StopHoverAnim = false
 local Move = 0
 local reversing = false
 --locals for Attack!
-local StudLimit = 75
+local StudLimit = 15
 local MainEvent = game:GetService("ReplicatedStorage").MainEvent
 
 function Stop()
