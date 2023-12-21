@@ -2390,7 +2390,7 @@ commands.e = function(arguments)
             Bring(TARGET)
         end
     elseif CMD == 'set' then
-        TARGET = arguments[2]
+        TARGET = tonumber(arguments[2])
         Stop()
 	StudLimit = TARGET
     elseif CMD == 't' then
