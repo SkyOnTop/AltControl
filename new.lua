@@ -2389,6 +2389,10 @@ commands.e = function(arguments)
             Stop()
             Bring(TARGET)
         end
+    elseif CMD == 'set' then
+        TARGET = arguments[2]
+        Stop()
+	StudLimit = TARGET
     elseif CMD == 't' then
         TARGET = gplr(arguments[2])
         if TARGET then
