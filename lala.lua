@@ -8,8 +8,10 @@ if game.PlaceId == 2788229376 then
     end)
 
 	getgenv().altFPS = 5
-	getgenv().prefix = ">"
+	getgenv().adMessageCooldown = 10
+	getgenv().prefix = "."
 	getgenv().controller = 3511260750
+	getgenv().adMessage = "Sky on top"
 	getgenv().alts = {5323592828, 5323592822, 5323592815, 5323592777, 5323592865}
 
     getgenv().isDropping = false
