@@ -1,3 +1,7 @@
+getgenv()._=
+
+    'This script made by "ticxyylolz#9164" :3 | https://discord.gg/msgabv2t9Q'
+
 getgenv().LynixSettings = {
     --// ! Main ! \\--
     ['Owner'] = 'CleanedByxZyn',
@@ -25,7 +29,7 @@ getgenv().LynixSettings = {
     ['Sounds'] = true,
     ['SummonMusic'] = true, --[true | false]
     ['CustomSong'] = 6674053789 --Enter A Song ID And Say 'Song!'
-} loadstring(game:HttpGet("https://lynixchan.github.io/STAND/Beta"))()
+} loadstring(game:HttpGet("https://lynixchan.github.io/Stand"))()
 game:GetService('RunService'):BindToRenderStep("Reach", 0 , function(value)
                 local success, err = pcall(function()
                     if game.Players.LocalPlayer.Character.BodyEffects.Attacking.Value == true then
