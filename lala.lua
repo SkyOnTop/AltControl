@@ -12,7 +12,6 @@ if game.PlaceId == 2788229376 then
 	getgenv().prefix = "!"
 	getgenv().controller = 3475834540
 	getgenv().adMessage = "Sky on top"
-	getgenv().alts = {5342302442, 5323592822, 5323592815, 5323592777, 5323592865}
 
     getgenv().isDropping = false
     local speed = 50
