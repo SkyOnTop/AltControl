@@ -5,10 +5,10 @@ getgenv()._=
 getgenv().LynixSettings = {
     --// ! Main ! \\--
     ['Owner'] = 'DoctorPaluge',
-    ['Position'] = 'Alt', --Position Of Stand [Back | Left | Right]
+    ['Position'] = 'Back', --Position Of Stand [Back | Left | Right]
     ['CrewID'] = 32570691, --Must Be In Group For It To Work
     ['StandMode'] = 'Star Platinum : OverHeaven', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
-    ['FlyMode'] = 'Heaven', --[Glide | Fly | Hover | Heaven]
+    ['FlyMode'] = 'Glide', --[Glide | Fly | Hover | Heaven]
     ['Prediction'] = 0.34, --Prediction For Attack Or Targetting
     ['GunPrediction'] = 0.17, --Prediction For Gun Kill
     ['AttackMode'] = 'Sky', --[Sky | Under] If [Sky] The Stand Will Attack Infront Of Then And If [Under] The Stand Will Attack In Underground
@@ -20,7 +20,7 @@ getgenv().LynixSettings = {
     ['AntiStomp'] = true, --[true | false] The Stand Will Cannot Be Stomped Or Grabbed
     ['CustomName'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master!'
     ['Hidescreen'] = true, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
-    ['ChatCmds'] = false, --[true | false] Chatted When You Use Some Command
+    ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
     ['AutoMask'] = true, --[true | false] Auto Buy Mask When The Stand Respawn
     ['MaskMode'] = 'Paintball', --[Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot] The Stand Will Buy The Mask You Selected
     ['FPSCAP'] = false, --[false | This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
@@ -31,26 +31,5 @@ getgenv().LynixSettings = {
     ['Sounds'] = false,
     ['SummonMusic'] = false, --[true | false]
     ['CustomSong'] = 6674053789 --Enter A Song ID And Say 'Song!'
-}loadstring(game:HttpGet("https://lynixchan.github.io/Stand"))()
-game:GetService('RunService'):BindToRenderStep("Reach", 0 , function(value)
-                local success, err = pcall(function()
-                    if game.Players.LocalPlayer.Character.BodyEffects.Attacking.Value == true then
-                        for i,v in pairs(game:GetService('Players'):GetChildren()) do
-                            if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.LeftHand.Position).Magnitude <= 50 then
-                                if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-                                    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChild('Handle') then
-                                        firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Handle, v.Character.UpperTorso, 0)
-                                    else
-                                        firetouchinterest(game.Players.LocalPlayer.Character['RightHand'], v.Character.UpperTorso, 0)
-                                        firetouchinterest(game.Players.LocalPlayer.Character['LeftHand'], v.Character.UpperTorso, 0)
-                                        firetouchinterest(game.Players.LocalPlayer.Character['RightFoot'], v.Character.UpperTorso, 0)
-                                        firetouchinterest(game.Players.LocalPlayer.Character['LeftFoot'], v.Character.UpperTorso, 0)
-                                        firetouchinterest(game.Players.LocalPlayer.Character['RightLowerLeg'], v.Character.UpperTorso, 0)
-                                        firetouchinterest(game.Players.LocalPlayer.Character['LeftLowerLeg'], v.Character.UpperTorso, 0)
-                                    end
-                                end
-                            end
-                        end
-                    end
-                    end)
-                end)
+}
+loadstring(game:HttpGet("https://lynixchan.github.io/Stand"))()
