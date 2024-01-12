@@ -1,6 +1,6 @@
 getgenv()._=
 
-    'This script made by "ticxyylolz#9164" :3 | https://discord.gg/msgabv2t9Q'
+    'This script made by "ticxyylolz#9164" GYAT | https://discord.gg/msgabv2t9Q'
 
 getgenv().LynixSettings = {
     --// ! Main ! \\--
